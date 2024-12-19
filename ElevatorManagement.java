@@ -46,9 +46,9 @@ public class ElevatorManagement {
     }
 
     private class Elevator implements Runnable {
-        private final int id;
+        private int id;
         private int currentFloor = 0;
-        private final BlockingQueue<Request> requests = new LinkedBlockingQueue<>();
+        private BlockingQueue<Request> requests = new LinkedBlockingQueue<>();
 
         public Elevator(int id) {
             this.id = id;
