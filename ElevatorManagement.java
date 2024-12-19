@@ -4,10 +4,10 @@ import java.util.concurrent.*;
 
 
 public class ElevatorManagement {
-    private final List<Elevator> elevators = new ArrayList<>();
-    private final List<Request> activeRequests = new ArrayList<>();
-    private final ElevatorGUI elevatorGUI;
-    private final int maxFloor;
+    private List<Elevator> elevators = new ArrayList<>();
+    private List<Request> activeRequests = new ArrayList<>();
+    private ElevatorGUI elevatorGUI;
+    private int maxFloor;
 
     public ElevatorManagement(int numElevators, int maxFloor, ElevatorGUI gui) {
         this.elevatorGUI = gui;
