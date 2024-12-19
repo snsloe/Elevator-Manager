@@ -18,8 +18,8 @@ public class ElevatorGUI extends JFrame {
 
         JPanel elevatorPanel = new JPanel();
         elevatorPanel.setLayout(new GridLayout(numElevators, 1, 10, 10));
-        for (int i = 0; i < numElevators; i++) {
-            JLabel label = new JLabel("Elevator " + (i + 1) + " at floor: 0", SwingConstants.CENTER);
+        for (int i = 1; i <= numElevators; i++) {
+            JLabel label = new JLabel("Elevator " + i + " at floor: ", SwingConstants.CENTER);
             label.setFont(new Font("Arial", Font.BOLD, 20));
             elevatorLabels.add(label);
             elevatorPanel.add(label);
@@ -79,14 +79,14 @@ public class ElevatorGUI extends JFrame {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int numElevators = 0;
+        int elevators = 0;
         int maxFloor = 0;
         boolean validInput = false;
 
         while (!validInput) {
             try {
                 System.out.println("Enter number of elevators: ");
-                numElevators = scanner.nextInt();
+                elevators = scanner.nextInt();
                 System.out.println("Enter maximum floor: ");
                 maxFloor = scanner.nextInt();
                 validInput = true;
@@ -97,8 +97,8 @@ public class ElevatorGUI extends JFrame {
         }
         scanner.close();
 
-        int finalNumElevators = numElevators;
+        int finalElevators = elevators;
         int finalMaxFloor = maxFloor;
-        SwingUtilities.invokeLater(() -> new ElevatorGUI(finalNumElevators, finalMaxFloor));
+        SwingUtilities.invokeLater(() -> new ElevatorGUI(finalElevators, finalMaxFloor));
     }
 }
