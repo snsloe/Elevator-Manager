@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class  {
+public class Request {
     private static int counter = 0;
     private int id;
     private int startFloor;
